@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 
 const ShowDetails = () => {
     const ShowDetail = useLoaderData();
-    const { name, image, summary, type, url, network } = ShowDetail;
+    const { name, image, summary, type, network } = ShowDetail;
 
     const handleBooking = (event) => {
         event.preventDefault();
@@ -36,12 +36,10 @@ const ShowDetails = () => {
             <h4 className='text-center text-2xl font-bold my-3'>{name} Show Summary</h4>
             <div className="card lg:card-side bg-base-100 mx-10 my-10 shadow-xl">
                 <figure><img className='w-full h-96' src={image?.original} alt="showImage" /></figure>
-                <div className="card-body w-96">
+                <div className="card-body lg:w-96">
                     <h2 className="card-title">{name}</h2>
                     <h4 className='text-green-600'>Type: {type}</h4>
                     <h4 className='text-black font-semibold'>Country: {network?.country?.name}</h4>
-
-                    <h4 className='text-black font-medium'>URL: <Link to={url}> <span className='text-blue-500'>{url}</span></Link> </h4>
                     <p> <b>Summary:</b> <br />
                         {summary}
                     </p>
