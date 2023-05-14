@@ -37,7 +37,7 @@ const ShowDetails = () => {
             <div className="card lg:card-side bg-base-100 mx-10 my-10 shadow-xl">
                 <figure><img className='w-full h-96' src={image?.original} alt="showImage" /></figure>
                 <div className="card-body w-96">
-                    <h2 className="card-title">{name}!</h2>
+                    <h2 className="card-title">{name}</h2>
                     <h4 className='text-green-600'>Type: {type}</h4>
                     <h4 className='text-black font-semibold'>Country: {network?.country?.name}</h4>
 
